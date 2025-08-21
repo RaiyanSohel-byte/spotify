@@ -6,6 +6,7 @@ const masterPlay = document.getElementById("masterPlay");
 const gif = document.getElementById("gif");
 let myProgressBar = document.getElementById("myProgressBar");
 let songItems = Array.from(document.getElementsByClassName("songItem"));
+let masterSongName = document.getElementById("masterSongName");
 let songs = [
   {
     songName: "Warriyo - Mortals",
@@ -107,14 +108,46 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach(
     element.addEventListener("click", (event) => {
       console.log(event.target);
       makeAllPlay();
+
       event.target.classList.remove("fa-circle-play");
       event.target.classList.add("fa-circle-pause");
       songIndex = parseInt(event.target.id);
+      masterSongName.innerText = songs[songIndex].songName;
       audioElement.src = `songs/${songIndex + 1}.mp3`;
       audioElement.currentTime = 0;
       audioElement.play();
+      gif.style.opacity = "1";
       masterPlay.classList.remove("fa-circle-play");
       masterPlay.classList.add("fa-circle-pause");
     });
   }
 );
+document.getElementById("next").addEventListener("click", () => {
+  if (songIndex >= 9) {
+    songIndex = 0;
+  } else {
+    songIndex++;
+  }
+  audioElement.src = `songs/${songIndex + 1}.mp3`;
+  masterSongName.innerText = songs[songIndex].songName;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  gif.style.opacity = "1";
+  masterPlay.classList.remove("fa-circle-play");
+  masterPlay.classList.add("fa-circle-pause");
+});
+document.getElementById("previous").addEventListener("click", () => {
+  if (songIndex <= 0) {
+    songIndex = 9;
+  } else {
+    songIndex--;
+  }
+
+  audioElement.src = `songs/${songIndex + 1}.mp3`;
+  masterSongName.innerText = songs[songIndex].songName;
+  audioElement.currentTime = 0;
+  audioElement.play();
+  gif.style.opacity = "1";
+  masterPlay.classList.remove("fa-circle-play");
+  masterPlay.classList.add("fa-circle-pause");
+});
