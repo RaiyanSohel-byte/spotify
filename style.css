@@ -51,7 +51,7 @@ nav ul li {
   margin: 23px auto;
   border-radius: 12px;
   padding: 34px;
-  background-image: url("bg.jpg");
+  background-image: url("bg2.jpg");
   background-repeat: none;
   background-position: center;
   background-size: cover;
@@ -59,7 +59,7 @@ nav ul li {
 .bottom {
   position: sticky;
   height: 130px;
-  background-color: black;
+  background-color: #212121;
   color: white;
   bottom: 0;
   display: flex;
