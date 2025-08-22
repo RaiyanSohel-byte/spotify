@@ -19,6 +19,11 @@ body {
 nav {
   font-family: "Ubuntu", sans-serif;
   background-color: #212121;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
@@ -113,7 +118,7 @@ nav ul li {
 }
 
 /* media query */
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 576px) {
   .bottom {
     flex-direction: column; /* stack items vertically */
     height: auto; /* allow auto height */
