@@ -137,6 +137,7 @@ nav ul li {
   }
   .songName {
     width: 90px;
+    text-align: center;
   }
   .timeStamp {
     width: 100px;
