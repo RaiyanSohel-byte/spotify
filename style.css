@@ -113,7 +113,7 @@ nav ul li {
 }
 
 /* media query */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 776px) {
   .bottom {
     flex-direction: column; /* stack items vertically */
     height: auto; /* allow auto height */
@@ -141,5 +141,9 @@ nav ul li {
   }
   .timeStamp {
     width: 100px;
+    text-align: center;
+  }
+  .songItem {
+    width: 280px;
   }
 }
