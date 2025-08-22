@@ -29,12 +29,12 @@ let songs = [
     coverPath: "covers/4.jpg",
   },
   {
-    songName: "Warsongs Piercing Light",
+    songName: "Piercing Light",
     filePath: "songs/5.mp3",
     coverPath: "covers/5.jpg",
   },
   {
-    songName: "They Don’t Care About Us",
+    songName: "Crawling",
     filePath: "songs/6.mp3",
     coverPath: "covers/6.jpg",
   },

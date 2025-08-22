@@ -111,3 +111,28 @@ nav ul li {
   opacity: 0;
   transition: opacity 0.4s ease-in;
 }
+
+/* media query */
+@media screen and (max-width: 576px) {
+  .bottom {
+    flex-direction: column; /* stack items vertically */
+    height: auto; /* allow auto height */
+    padding: 10px 0;
+  }
+
+  .songInfo {
+    position: static; /* remove absolute positioning */
+    order: -1; /* move songInfo to the top */
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #myProgressBar {
+    width: 90vw; /* smaller width for mobile */
+  }
+  .songName,
+  .timeStamp {
+    font-size: 10px;
+  }
+}
