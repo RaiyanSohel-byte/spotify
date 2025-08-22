@@ -71,11 +71,13 @@ masterPlay.addEventListener("click", () => {
     audioElement.play();
     masterPlay.classList.remove("fa-circle-play");
     masterPlay.classList.add("fa-circle-pause");
+    masterSongName.innerText = songs[songIndex].songName;
     gif.style.opacity = "1";
   } else {
     audioElement.pause();
     masterPlay.classList.remove("fa-circle-pause");
     masterPlay.classList.add("fa-circle-play");
+
     gif.style.opacity = "0";
   }
 });
